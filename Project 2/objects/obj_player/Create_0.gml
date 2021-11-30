@@ -1,6 +1,12 @@
-walkSpeed = 2;
-sprintSpeed = 3;
+event_inherited();
 
-//Getting TileSets
-tileset1 = layer_tilemap_get_id(layer_get_id("GroundTiles1"));
-tileset2 = layer_tilemap_get_id(layer_get_id("GroundTiles2"));
+// Array of InventoryItem
+// inventory = [];
+
+tileX = 5;
+tileY = 5;
+
+var coords = get_screen_coords(tileX, tileY);
+
+x = coords.x;
+y = coords.y;
