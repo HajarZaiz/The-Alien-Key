@@ -6,6 +6,9 @@ if(keyboard_check(ord("I")) and !invDisplay){
 }
 
 if(invDisplay){
+	draw_set_alpha(0.75);
+	draw_sprite(spr_InvBackground, 0, room_width/2, room_height/2);
+	
 	draw_sprite(spr_Inventory, 0, room_width/2, room_height/2);
 	displayInventory()
 	draw_set_halign(fa_center)

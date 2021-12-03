@@ -15,6 +15,6 @@ global.invSlots = 0;
 global.invCapacity = 16;
 
 //For testing
-ds_map_add(global.inventory, InventoryItem.LavaShoe, 0);
-ds_map_add(global.inventory, InventoryItem.WaterShoe, 6);
-ds_map_add(global.inventory, InventoryItem.Spikes, 4);
+//ds_map_add(global.inventory, InventoryItem.LavaShoe, 0);
+//ds_map_add(global.inventory, InventoryItem.WaterShoe, 6);
+//ds_map_add(global.inventory, InventoryItem.Spikes, 4);

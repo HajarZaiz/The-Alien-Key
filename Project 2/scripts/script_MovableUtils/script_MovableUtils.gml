@@ -12,6 +12,35 @@ global.tileMovementSpeed = 0.5;
 function can_move_on_tile(tileType, movableTileTypes) {
 	for (var i = 0; i < array_length(movableTileTypes); i++) {
 		if (movableTileTypes[i] == tileType) return true;
+		//Allow moving with powerup (Problem with applying the same function to guards)
+		if(tileType == TileType.Lava){
+			if(ds_map_exists(global.inventory, InventoryItem.LavaShoe)){
+				var n = ds_map_find_value(global.inventory, InventoryItem.LavaShoe);
+				//Powerup of the same tiletype is available
+				if(n > 0){
+					if(n-1 == 0){
+						ds_map_delete(global.inventory, InventoryItem.LavaShoe);
+					}else{
+						ds_map_replace(global.inventory, InventoryItem.LavaShoe, n-1);
+					}
+					return true;
+				}
+			}
+		}
+		if(tileType == TileType.Water){
+			if(ds_map_exists(global.inventory, InventoryItem.WaterShoe)){
+				var n = ds_map_find_value(global.inventory, InventoryItem.WaterShoe);
+				//Powerup of the same tiletype is available
+				if(n > 0){
+					if(n-1 == 0){
+						ds_map_delete(global.inventory, InventoryItem.WaterShoe);
+					}else{
+						ds_map_replace(global.inventory, InventoryItem.WaterShoe, n-1);
+					}
+					return true;
+				}
+			}
+		}
 	}
 	return false;
 }
