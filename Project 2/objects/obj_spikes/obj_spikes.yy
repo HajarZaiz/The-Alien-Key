@@ -1,7 +1,10 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_Spikes",
+    "path": "sprites/spr_Spikes/spr_Spikes.yy",
+  },
   "solid": false,
-  "visible": false,
+  "visible": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": null,
@@ -23,11 +26,11 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Environment",
-    "path": "folders/Objects/Environment.yy",
+    "name": "Collectables",
+    "path": "folders/Objects/Collectables.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_spikes",
+  "name": "obj_Spikes",
   "tags": [],
   "resourceType": "GMObject",
 }

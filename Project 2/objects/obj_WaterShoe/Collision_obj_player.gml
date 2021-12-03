@@ -1,0 +1,1 @@
+pickUpItem(InventoryItem.WaterShoe);

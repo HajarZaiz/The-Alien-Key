@@ -1,1 +1,1 @@
-instance_destroy(other);
+pickUpItem(InventoryItem.Spikes);
