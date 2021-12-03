@@ -15,6 +15,8 @@ if (tileMovementProgress == -2.0) {
 	else if (down && right) moveDirection = MoveDirection.BottomRight;
 	else moveDirection = MoveDirection.Idle;
 	
-	if (moveDirection != MoveDirection.Idle) tileMovementProgress = -1.0;
-	
+	if (moveDirection != MoveDirection.Idle) {
+		tileMovementProgress = -1.0;
+		previousDirection = moveDirection;
+	}
 }
