@@ -9,10 +9,22 @@ if (tileMovementProgress == -2.0) {
 	var down = keyboard_check(ord("S")) || keyboard_check(vk_down);
 	
 	// Set the movement based on the inputs
-	if (up && left) moveDirection = MoveDirection.TopLeft;
-	else if (up && right) moveDirection = MoveDirection.TopRight;
-	else if (down && left) moveDirection = MoveDirection.BottomLeft;
-	else if (down && right) moveDirection = MoveDirection.BottomRight;
+	if (up && left) {
+		moveDirection = MoveDirection.TopLeft;
+		sprite_index = spr_PlayerTopLeft;
+	}
+	else if (up && right) {
+		moveDirection = MoveDirection.TopRight;
+		sprite_index = spr_PlayerTopRight;
+	}
+	else if (down && left) {
+		moveDirection = MoveDirection.BottomLeft;
+		sprite_index = spr_PlayerBottomLeft;
+	}
+	else if (down && right) {
+		moveDirection = MoveDirection.BottomRight;
+		sprite_index = spr_PlayerBottomRight;
+	}
 	else moveDirection = MoveDirection.Idle;
 	
 	if (moveDirection != MoveDirection.Idle) {

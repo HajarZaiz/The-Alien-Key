@@ -1,10 +1,11 @@
 event_inherited();
 
-tileX = 5;
-tileY = 5;
+
+var tileCoords = get_tile_coords(x, y);
+tileX = tileCoords.x;
+tileY = tileCoords.y;
 
 var coords = get_screen_coords(tileX, tileY);
-
 x = coords.x;
 y = coords.y;
 
@@ -15,7 +16,7 @@ global.inventory = ds_map_create();
 global.invSlots = 0;
 global.invCapacity = 16;
 
-previousDirection = MoveDirection.TopRight;
+previousDirection = MoveDirection.BottomLeft;
 
 //For testing
 //ds_map_add(global.inventory, InventoryItem.LavaShoe, 0);

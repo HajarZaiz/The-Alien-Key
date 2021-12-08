@@ -15,6 +15,7 @@ if(invDisplay){
 	draw_set_font(f_pause);
 	draw_set_color(make_color_rgb(195, 219, 217));
 	draw_text(room_width/2, 150, "PAUSED");
+	draw_set_alpha(1.0);
 }
 
 //Pause game
