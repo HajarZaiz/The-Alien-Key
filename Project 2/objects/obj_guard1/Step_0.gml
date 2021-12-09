@@ -31,3 +31,25 @@ if (tileMovementProgress == -2.0) {
 		tileMovementProgress = -1.0;
 	}
 }
+
+
+//Collision
+if (tileX == obj_player.tileX && tileY == obj_player.tileY && canDamage) {
+	canDamage = !canDamage;
+	lives = lives - 1;
+	if(lives <= 0){
+		room_goto(GameOver);
+	}
+}
+
+if(!canDamage && tileX != obj_player.tileX && tileY != obj_player.tileY){
+	canDamage = !canDamage;
+}
+
+if(!searching){
+	//Check if nearby and stop patrolling
+	searching = true;
+	A_star_search({x: tileX, y: tileY}, {x: obj_player.tileX, y: obj_player.tileY}, movableTiles);
+}
+
+

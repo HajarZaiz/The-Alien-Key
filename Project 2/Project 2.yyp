@@ -26,6 +26,7 @@
     {"id":{"name":"tileset_Ground","path":"tilesets/tileset_Ground/tileset_Ground.yy",},"order":0,},
     {"id":{"name":"obj_movable","path":"objects/obj_movable/obj_movable.yy",},"order":6,},
     {"id":{"name":"f_score","path":"fonts/f_score/f_score.yy",},"order":1,},
+    {"id":{"name":"script_Pathfinding","path":"scripts/script_Pathfinding/script_Pathfinding.yy",},"order":3,},
     {"id":{"name":"spr_PlayerTopLeft","path":"sprites/spr_PlayerTopLeft/spr_PlayerTopLeft.yy",},"order":0,},
     {"id":{"name":"spr_InvHeart","path":"sprites/spr_InvHeart/spr_InvHeart.yy",},"order":5,},
     {"id":{"name":"spr_Tileset","path":"sprites/spr_Tileset/spr_Tileset.yy",},"order":3,},
