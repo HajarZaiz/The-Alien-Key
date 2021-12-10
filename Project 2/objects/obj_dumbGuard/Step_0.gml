@@ -53,9 +53,9 @@ if(instance_exists(obj_player)){
 }
 
 //This guard is supposed to be the dumbest one as he doesn't spot lava, spikes, and water during chasing
-//Check if Guard is above Lava, Spikes and destroy him. He can walk on water
+//Check if Guard is above Lava, Spikes and destroy him
 var currentTileType = get_tile(tileX, tileY);
-if(currentTileType == TileType.Lava or currentTileType == TileType.Spike){
+if(currentTileType == TileType.Lava or currentTileType == TileType.Water or currentTileType == TileType.Spike){
 	instance_destroy();
 }
 if(instance_exists(obj_player)){

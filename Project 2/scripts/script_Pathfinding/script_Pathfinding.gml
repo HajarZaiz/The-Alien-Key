@@ -2,6 +2,8 @@
 function A_star_search(start, destination, movableTiles){
 	
 	var neighbors;
+	//Map to keep track of parent tiles:  tile --> parent tile
+	parentTile = ds_map_create();
 	//Solution path
 	path = ds_list_create();
 	//Set of tiles to be explored
@@ -26,7 +28,7 @@ function A_star_search(start, destination, movableTiles){
 		//Remove from openlist and add to closed list
 		ds_list_delete(openList, ds_list_find_index(openList, current));
 		ds_list_add(closedList, current);
-		//TESTING
+		
 		show_debug_message("open list: ");
 		printList(openList);
 		show_debug_message("closed list: ");
@@ -36,8 +38,17 @@ function A_star_search(start, destination, movableTiles){
 		//If we found our path
 		if(current.x == destination.x and current.y == destination.y){
 			show_debug_message("GOTCHA");
-			//TO DO: Backtrack
-			return;
+			var c = {x: destination.x, y: destination.y};
+			show_debug_message(typeof(c));
+			show_debug_message(c);
+			var n = ds_map_find_value(parentTile, {x: destination.x, y: destination.y});
+			//It Should be a struct 
+			show_debug_message(n);
+			show_debug_message(typeof(n));
+					
+			show_debug_message("The solution path is:");
+			printList(path);
+			return path;
 		}
 	
 		
@@ -50,7 +61,38 @@ function A_star_search(start, destination, movableTiles){
 			{type: neighbors.bottomLeft, x:current.x - 1 , y: current.y + 1},
 			{type: neighbors.bottomRight, x:current.x + 1 , y: current.y + 1}
 		]
-
+		
+		//Keeping track of parent
+		var n1 = {x: n[0].x, y: n[0].y};
+		var n2 = {x: n[1].x, y: n[1].y};
+		var n3 = {x: n[2].x, y: n[2].y};
+		var n4 = {x: n[3].x, y: n[3].y};
+		ds_map_add(parentTile, n1, current);
+		ds_map_add(parentTile, n2, current);
+		ds_map_add(parentTile, n3, current);
+		ds_map_add(parentTile, n4, current);
+		
+		//FOR TESTING
+		show_debug_message("The parent of: ");
+		show_debug_message(n1);
+		show_debug_message("Is the tile: ");
+		show_debug_message(ds_map_find_value(parentTile, n1));
+		
+		show_debug_message("The parent of: ");
+		show_debug_message(n2);
+		show_debug_message("Is the tile: ");
+		show_debug_message(ds_map_find_value(parentTile, n2));
+		
+		show_debug_message("The parent of: ");
+		show_debug_message(n3);
+		show_debug_message("Is the tile: ");
+		show_debug_message(ds_map_find_value(parentTile, n3));
+		
+		show_debug_message("The parent of: ");
+		show_debug_message(n4);
+		show_debug_message("Is the tile: ");
+		show_debug_message(ds_map_find_value(parentTile, n4));
+		
 		
 		//For each neighbor
 		for(var i = 0; i < array_length(n); i++){
