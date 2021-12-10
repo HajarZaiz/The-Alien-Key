@@ -21,32 +21,34 @@ function A_star_search(start, destination, movableTiles){
 				current = ds_list_find_value(openList, i);
 			}
 		}
-		//TESTING
-		show_debug_message("Lowest cost tile: ");
-		show_debug_message(current);
-		//TESTING END
-		//Remove from openlist and add to closed list
+		// TESTING
+		// show_debug_message("Lowest cost tile: ");
+		// show_debug_message(current);
+		// TESTING END
+		// Remove from openlist and add to closed list
 		ds_list_delete(openList, ds_list_find_index(openList, current));
 		ds_list_add(closedList, current);
 		
-		show_debug_message("open list: ");
-		printList(openList);
-		show_debug_message("closed list: ");
-		printList(closedList);
-		//TESTING END
+		// show_debug_message("open list: ");
+		// printList(openList);
+		// show_debug_message("closed list: ");
+		// printList(closedList);
+		// TESTING END
 		
-		//If we found our path
+		// If we found our path
+		// show_debug_message(current);
 		if(current.x == destination.x and current.y == destination.y){
 			show_debug_message("GOTCHA");
-			var c = {x: destination.x, y: destination.y};
-			show_debug_message(typeof(c));
-			show_debug_message(c);
-			var n = ds_map_find_value(parentTile, {x: destination.x, y: destination.y});
-			//It Should be a struct 
+			// var c = {x: destination.x, y: destination.y};
+			// show_debug_message(typeof(c));
+			// show_debug_message(c);
+			var n = strToPos(ds_map_find_value(parentTile, posToStr({x: destination.x, y: destination.y})));
+			// ds_map_exists()
+			// It Should be a struct 
 			show_debug_message(n);
 			show_debug_message(typeof(n));
 					
-			show_debug_message("The solution path is:");
+			// show_debug_message("The solution path is:");
 			printList(path);
 			return path;
 		}
@@ -62,17 +64,20 @@ function A_star_search(start, destination, movableTiles){
 			{type: neighbors.bottomRight, x:current.x + 1 , y: current.y + 1}
 		]
 		
-		//Keeping track of parent
-		var n1 = {x: n[0].x, y: n[0].y};
-		var n2 = {x: n[1].x, y: n[1].y};
-		var n3 = {x: n[2].x, y: n[2].y};
-		var n4 = {x: n[3].x, y: n[3].y};
-		ds_map_add(parentTile, n1, current);
-		ds_map_add(parentTile, n2, current);
-		ds_map_add(parentTile, n3, current);
-		ds_map_add(parentTile, n4, current);
+		// Keeping track of parent
+		// var n1 = {x: n[0].x, y: n[0].y};
+		// var n2 = {x: n[1].x, y: n[1].y};
+		// var n3 = {x: n[2].x, y: n[2].y};
+		// var n4 = {x: n[3].x, y: n[3].y};
+		currentStr = posToStr(current);
+		ds_map_add(parentTile, posToStr({x: n[0].x, y: n[0].y}), currentStr);
+		ds_map_add(parentTile, posToStr({x: n[1].x, y: n[1].y}), currentStr);
+		ds_map_add(parentTile, posToStr({x: n[2].x, y: n[2].y}), currentStr);
+		ds_map_add(parentTile, posToStr({x: n[3].x, y: n[3].y}), currentStr);
+
 		
-		//FOR TESTING
+		// FOR TESTING
+		/*
 		show_debug_message("The parent of: ");
 		show_debug_message(n1);
 		show_debug_message("Is the tile: ");
@@ -92,15 +97,15 @@ function A_star_search(start, destination, movableTiles){
 		show_debug_message(n4);
 		show_debug_message("Is the tile: ");
 		show_debug_message(ds_map_find_value(parentTile, n4));
-		
+		*/
 		
 		//For each neighbor
 		for(var i = 0; i < array_length(n); i++){
 			//Check to see if the neighbor tile is not already visited
 			if(!valueExistsInList(closedList, {x: n[i].x, y: n[i].y})){
-				show_debug_message("The neighbor");
-				show_debug_message({x: n[i].x, y: n[i].y});
-				show_debug_message("Never visited");
+				// show_debug_message("The neighbor");
+				// show_debug_message({x: n[i].x, y: n[i].y});
+				// show_debug_message("Never visited");
 	
 				//Check to see if the neighbor tile is traversable
 				if(can_move_on_tile(n[i].type, movableTiles)){
@@ -113,6 +118,18 @@ function A_star_search(start, destination, movableTiles){
 		}
 		
 	}
+}
+
+function posToStr(pos) {
+	return string(pos.x) + " " + string(pos.y);
+}
+
+function strToPos(str) {
+	var pos = string_pos(" ", str);
+	return {
+		x: real(string_copy(str, 0, pos)),
+		y: real(string_copy(str, pos + 1, string_length(str) - 1))
+	};
 }
 
 //Get the total cost of the tile F = G + H
