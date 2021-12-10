@@ -30,6 +30,11 @@
   "properties": [
     {"varType":1,"value":"1","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"lives_damage","tags":[],"resourceType":"GMObjectProperty",},
     {"varType":0,"value":"500","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"observationRadius","tags":[],"resourceType":"GMObjectProperty",},
+    {"varType":4,"value":" [MoveDirection.TopRight, MoveDirection.TopRight, MoveDirection.TopRight, MoveDirection.BottomRight, MoveDirection.BottomRight, MoveDirection.BottomLeft, MoveDirection.BottomLeft, MoveDirection.BottomLeft, MoveDirection.TopLeft, MoveDirection.TopLeft]","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"patrollingPath","tags":[],"resourceType":"GMObjectProperty",},
+    {"varType":5,"value":"spr_DumbEnemyTopLeft","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"spriteTopLeft","tags":[],"resourceType":"GMObjectProperty",},
+    {"varType":5,"value":"spr_DumbEnemyTopRight","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"spriteTopRight","tags":[],"resourceType":"GMObjectProperty",},
+    {"varType":5,"value":"spr_DumbEnemyBottomLeft","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"spriteBottomLeft","tags":[],"resourceType":"GMObjectProperty",},
+    {"varType":5,"value":"spr_DumbEnemyBottomRight","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"spriteBottomRight","tags":[],"resourceType":"GMObjectProperty",},
   ],
   "overriddenProperties": [],
   "parent": {

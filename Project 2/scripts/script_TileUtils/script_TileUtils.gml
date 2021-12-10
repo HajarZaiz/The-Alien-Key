@@ -43,6 +43,7 @@ function loadTilesets() {
 	];
 }
 
+
 // Returns Struct with TileTypes {topLeft, topRight, bottomLeft, bottomRight}
 function get_surrounding_tiles(x, y) {
 	return {

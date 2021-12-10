@@ -76,3 +76,4 @@ function pickUpItem(itemType){
 		global.invSlots += 1;
 	}
 }
+

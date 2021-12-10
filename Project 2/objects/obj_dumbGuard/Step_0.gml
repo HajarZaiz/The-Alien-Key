@@ -2,6 +2,7 @@ event_inherited();
 
 if (tileMovementProgress == -2.0 and patrolling) {
 
+	/*
 	if (upRight > 0) {
 		moveDirection = MoveDirection.TopRight;
 		upRight = upRight - 1;
@@ -30,6 +31,31 @@ if (tileMovementProgress == -2.0 and patrolling) {
 		downLeft = 3;
 		moveDirection = MoveDirection.Idle;
 	}
+	*/
+	for(var i = 0; i < array_length(patrollingPath); i++){
+			if(patrollingPath[i] == MoveDirection.TopLeft){
+				show_debug_message("I have to go top left");
+				moveDirection = MoveDirection.TopLeft;
+				sprite_index = spriteTopLeft;
+			}
+			else if(patrollingPath[i] == MoveDirection.TopRight){
+				show_debug_message("I have to go top right");
+				moveDirection = MoveDirection.TopRight;
+				sprite_index = spriteTopRight;
+			}
+			else if(patrollingPath[i] == MoveDirection.BottomLeft){
+				show_debug_message("I have to go bottom left");
+				moveDirection = MoveDirection.BottomLeft;
+				sprite_index = spriteBottomLeft;
+			}
+			else if(patrollingPath[i] == MoveDirection.BottomRight){
+				show_debug_message("I have to go bottom right");
+				moveDirection = MoveDirection.BottomRight;
+				sprite_index = spriteBottomRight;
+			}else {
+				moveDirection = MoveDirection.Idle;
+			}
+	}
 	
 	if (moveDirection != MoveDirection.Idle) {
 		tileMovementProgress = -1.0;
@@ -52,6 +78,7 @@ if(instance_exists(obj_player)){
 	}
 }
 
+/*
 //This guard is supposed to be the dumbest one as he doesn't spot lava, spikes, and water during chasing
 //Check if Guard is above Lava, Spikes and destroy him
 var currentTileType = get_tile(tileX, tileY);
@@ -96,3 +123,4 @@ if(instance_exists(obj_player)){
 		}
 	}
 }
+*/

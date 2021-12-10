@@ -79,3 +79,4 @@ function get_tile_coords(xCoord, yCoord) {
 	if (coords.x % 2 != coords.y % 2) coords.x = coords.x - 1;
 	return coords;
 }
+
