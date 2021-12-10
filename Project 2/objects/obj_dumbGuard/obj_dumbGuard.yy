@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_PlayerBottomLeft",
-    "path": "sprites/spr_PlayerBottomLeft/spr_PlayerBottomLeft.yy",
+    "name": "spr_DumbEnemyBottomLeft",
+    "path": "sprites/spr_DumbEnemyBottomLeft/spr_DumbEnemyBottomLeft.yy",
   },
   "solid": false,
   "visible": true,
@@ -26,16 +26,18 @@
   "eventList": [
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":84,"eventType":9,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
-  "properties": [],
+  "properties": [
+    {"varType":1,"value":"1","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"lives_damage","tags":[],"resourceType":"GMObjectProperty",},
+    {"varType":0,"value":"500","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"observationRadius","tags":[],"resourceType":"GMObjectProperty",},
+  ],
   "overriddenProperties": [],
   "parent": {
     "name": "Objects",
     "path": "folders/Objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_player",
+  "name": "obj_dumbGuard",
   "tags": [],
   "resourceType": "GMObject",
 }
