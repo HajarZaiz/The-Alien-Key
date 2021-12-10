@@ -10,7 +10,7 @@ function A_star_search(start, destination, movableTiles){
 	closedList = ds_list_create();
 	ds_list_add(openList, start);
 	
-	for(var a= 0; a < 10; a++){
+	while(!ds_list_empty(openList)){
 		var current = ds_list_find_value(openList, 0);
 		
 		//Get the tile with the lowest f cost
@@ -34,7 +34,8 @@ function A_star_search(start, destination, movableTiles){
 		//TESTING END
 		
 		//If we found our path
-		if(current == destination){
+		if(current.x == destination.x and current.y == destination.y){
+			show_debug_message("GOTCHA");
 			//TO DO: Backtrack
 			return;
 		}
@@ -54,7 +55,7 @@ function A_star_search(start, destination, movableTiles){
 		//For each neighbor
 		for(var i = 0; i < array_length(n); i++){
 			//Check to see if the neighbor tile is not already visited
-			if(ds_list_find_index(closedList, {x: n[i].x, y: n[i].y}) == -1){
+			if(!valueExistsInList(closedList, {x: n[i].x, y: n[i].y})){
 				show_debug_message("The neighbor");
 				show_debug_message({x: n[i].x, y: n[i].y});
 				show_debug_message("Never visited");
@@ -62,7 +63,7 @@ function A_star_search(start, destination, movableTiles){
 				//Check to see if the neighbor tile is traversable
 				if(can_move_on_tile(n[i].type, movableTiles)){
 					//If it is not already in the open list add it
-					if(ds_list_find_index(openList, {x: n[i].x, y: n[i].y}) == -1){
+					if(!valueExistsInList(openList, {x: n[i].x, y: n[i].y})){
 						ds_list_add(openList, {x: n[i].x, y: n[i].y});
 					}
 				}
@@ -79,6 +80,17 @@ function get_f_cost(start, current, destination){
 	var gCost = abs(start.x - current.x) + abs(start.y - current.y);
 	var hCost = abs(current.x - destination.x) + abs(current.y - destination.y);
 	return gCost + hCost;
+}
+
+function valueExistsInList(list, value){
+	for (var i = 0; i < ds_list_size(list); i++)
+	{
+	   var current = list[| i];
+	   if(current.x == value.x and current.y == value.y){
+		   return true;
+	   }
+	}
+	return false;
 }
 
 function printList(list){
