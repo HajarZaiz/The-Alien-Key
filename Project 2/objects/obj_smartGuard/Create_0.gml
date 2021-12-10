@@ -18,8 +18,9 @@ upLeft = 3;
 downRight = 3;
 downLeft = 3;
 
-movableTiles = [TileType.Ground];
+movableTiles = [TileType.Ground, TileType.Spike];
 //Prevent decreasing health repetitively
 canDamage = true;
 
 searching = false;
+

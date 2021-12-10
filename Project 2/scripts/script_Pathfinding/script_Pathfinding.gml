@@ -21,36 +21,21 @@ function A_star_search(start, destination, movableTiles){
 				current = ds_list_find_value(openList, i);
 			}
 		}
-		// TESTING
-		// show_debug_message("Lowest cost tile: ");
-		// show_debug_message(current);
-		// TESTING END
-		// Remove from openlist and add to closed list
+
 		ds_list_delete(openList, ds_list_find_index(openList, current));
 		ds_list_add(closedList, current);
-		
-		// show_debug_message("open list: ");
-		// printList(openList);
-		// show_debug_message("closed list: ");
-		// printList(closedList);
-		// TESTING END
-		
+
 		// If we found our path
 		if(current.x == destination.x and current.y == destination.y){
 			show_debug_message("GOTCHA");
 			var c = {x: destination.x, y: destination.y};
-			// show_debug_message(typeof(c));
-			// show_debug_message(c);
 			
 			while(c.x != start.x or c.y != start.y){
 				ds_list_add(path, c);
 				var n = strToPos(ds_map_find_value(parentTile, posToStr({x: c.x, y: c.y})));
 				c = n;
 			}
-
-			//show_debug_message(n);
-			//show_debug_message(typeof(n));
-					
+			ds_list_add(path, start);
 			show_debug_message("The solution path is:");
 			printList(path);
 			return path;
@@ -67,49 +52,17 @@ function A_star_search(start, destination, movableTiles){
 			{type: neighbors.bottomRight, x:current.x + 1 , y: current.y + 1}
 		]
 		
-		// Keeping track of parent
-		// var n1 = {x: n[0].x, y: n[0].y};
-		// var n2 = {x: n[1].x, y: n[1].y};
-		// var n3 = {x: n[2].x, y: n[2].y};
-		// var n4 = {x: n[3].x, y: n[3].y};
+		//Keep track of the parent tile
 		currentStr = posToStr(current);
 		ds_map_add(parentTile, posToStr({x: n[0].x, y: n[0].y}), currentStr);
 		ds_map_add(parentTile, posToStr({x: n[1].x, y: n[1].y}), currentStr);
 		ds_map_add(parentTile, posToStr({x: n[2].x, y: n[2].y}), currentStr);
 		ds_map_add(parentTile, posToStr({x: n[3].x, y: n[3].y}), currentStr);
-
-		
-		// FOR TESTING
-		/*
-		show_debug_message("The parent of: ");
-		show_debug_message(n1);
-		show_debug_message("Is the tile: ");
-		show_debug_message(ds_map_find_value(parentTile, n1));
-		
-		show_debug_message("The parent of: ");
-		show_debug_message(n2);
-		show_debug_message("Is the tile: ");
-		show_debug_message(ds_map_find_value(parentTile, n2));
-		
-		show_debug_message("The parent of: ");
-		show_debug_message(n3);
-		show_debug_message("Is the tile: ");
-		show_debug_message(ds_map_find_value(parentTile, n3));
-		
-		show_debug_message("The parent of: ");
-		show_debug_message(n4);
-		show_debug_message("Is the tile: ");
-		show_debug_message(ds_map_find_value(parentTile, n4));
-		*/
 		
 		//For each neighbor
 		for(var i = 0; i < array_length(n); i++){
 			//Check to see if the neighbor tile is not already visited
 			if(!valueExistsInList(closedList, {x: n[i].x, y: n[i].y})){
-				// show_debug_message("The neighbor");
-				// show_debug_message({x: n[i].x, y: n[i].y});
-				// show_debug_message("Never visited");
-	
 				//Check to see if the neighbor tile is traversable
 				if(can_move_on_tile(n[i].type, movableTiles)){
 					//If it is not already in the open list add it

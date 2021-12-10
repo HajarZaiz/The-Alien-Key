@@ -12,3 +12,7 @@ draw_sprite(spr_InvHeart, 0, 100,  50 + (sprite_get_bbox_bottom(spr_Healthbar) -
 draw_set_font(f_score);
 draw_set_halign(fa_middle);
 draw_text(170, 100, "Score: "+ string(score));
+
+if(room == Room1 && global.ownedKeys == 1){
+	draw_sprite(spr_Key, 0, 1850, 50);
+}

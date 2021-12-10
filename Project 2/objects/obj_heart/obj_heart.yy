@@ -1,16 +1,13 @@
 {
   "spriteId": {
-    "name": "spr_DumbEnemyBottomLeft",
-    "path": "sprites/spr_DumbEnemyBottomLeft/spr_DumbEnemyBottomLeft.yy",
+    "name": "spr_Heart",
+    "path": "sprites/spr_Heart/spr_Heart.yy",
   },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": {
-    "name": "obj_movable",
-    "path": "objects/obj_movable/obj_movable.yy",
-  },
+  "parentObjectId": null,
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -27,17 +24,14 @@
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
-  "properties": [
-    {"varType":1,"value":"1","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"lives_damage","tags":[],"resourceType":"GMObjectProperty",},
-    {"varType":0,"value":"500","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"observationRadius","tags":[],"resourceType":"GMObjectProperty",},
-  ],
+  "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Guards",
-    "path": "folders/Objects/Guards.yy",
+    "name": "Collectables",
+    "path": "folders/Objects/Collectables.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_dumbGuard",
+  "name": "obj_heart",
   "tags": [],
   "resourceType": "GMObject",
 }

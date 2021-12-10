@@ -3,38 +3,55 @@
 
 // Currently not moving/finished moving, prepare for next move if applicable
 if (tileMovementProgress == -1.0) {
+	show_debug_message("I'm here");
 	switch (moveDirection) {
 		case MoveDirection.TopLeft:
 			if (can_move_on_tile(get_tile(tileX - 1, tileY - 1), movableTiles)) {
+				show_debug_message("I'm allowed to move");
 				// Move to the tile
 				tileMovementProgress = 0.0;
 				tileMovementBegin = current_time;
 			}
-			else tileMovementProgress = -2.0;
+			else { 
+				show_debug_message("I'm not allowed to move");
+				tileMovementProgress = -2.0;
+			}
 			break;
 		case MoveDirection.TopRight:
 			if (can_move_on_tile(get_tile(tileX + 1, tileY - 1), movableTiles)) {
+				show_debug_message("I'm allowed to move");
 				// Move to the tile
 				tileMovementProgress = 0.0;
 				tileMovementBegin = current_time;
 			}
-			else tileMovementProgress = -2.0;
+			else { 
+				show_debug_message("I'm not allowed to move");
+				tileMovementProgress = -2.0;
+			}
 			break;
 		case MoveDirection.BottomLeft:
 			if (can_move_on_tile(get_tile(tileX - 1, tileY + 1), movableTiles)) {
+				show_debug_message("I'm allowed to move");
 				// Move to the tile
 				tileMovementProgress = 0.0;
 				tileMovementBegin = current_time;
 			}
-			else tileMovementProgress = -2.0;
+			else { 
+				show_debug_message("I'm not allowed to move");
+				tileMovementProgress = -2.0;
+			}
 			break;
 		case MoveDirection.BottomRight:
 			if (can_move_on_tile(get_tile(tileX + 1, tileY + 1), movableTiles)) {
+				show_debug_message("I'm allowed to move");
 				// Move to the tile
 				tileMovementProgress = 0.0;
 				tileMovementBegin = current_time;
 			}
-			else tileMovementProgress = -2.0;
+			else { 
+				show_debug_message("I'm not allowed to move");
+				tileMovementProgress = -2.0;
+			}
 			break;
 		default:
 			break;
