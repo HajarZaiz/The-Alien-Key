@@ -1,16 +1,12 @@
 event_inherited();
 
-tileX = 9;
-tileY = 15;
-
-
-var coords = get_screen_coords(tileX, tileY);
-x = coords.x;
-y = coords.y;
-
 var tileCoords = get_tile_coords(x, y);
 tileX = tileCoords.x;
 tileY = tileCoords.y;
+
+var screenCoords = get_screen_coords(tileX, tileY);
+x = screenCoords.x;
+y = screenCoords.y;
 
 //patrolling variables
 upRight = 3;

@@ -27,7 +27,7 @@ function A_star_search(start, destination, movableTiles){
 
 		// If we found our path
 		if(current.x == destination.x and current.y == destination.y){
-			show_debug_message("GOTCHA");
+			// show_debug_message("GOTCHA");
 			var c = {x: destination.x, y: destination.y};
 			
 			while(c.x != start.x or c.y != start.y){
@@ -36,7 +36,7 @@ function A_star_search(start, destination, movableTiles){
 				c = n;
 			}
 			ds_list_add(path, start);
-			show_debug_message("The solution path is:");
+			// show_debug_message("The solution path is:");
 			printList(path);
 			return path;
 		}

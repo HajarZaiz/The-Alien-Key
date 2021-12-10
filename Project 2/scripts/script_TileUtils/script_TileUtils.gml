@@ -53,18 +53,6 @@ function get_surrounding_tiles(x, y) {
 	};
 }
 
-// Returns list of Structs for each adjacent tile (including this) of the same tile type
-// List[{x: int, y: int}, {x: int, y: int}, ...]
-function get_tile_flood(x, y, tileType) {
-	tiles = ds_list_create();
-	if (get_tile(x, y) != tileType)
-		return tiles;
-	
-	ds_list_add(tiles, {x: x, y: y});
-	// TODO - Get all adjacent tiles of the same time
-	return tiles;
-}
-
 // Returns Struct with {x: int, y: int, layer: int (1 or 2)}
 // Converts from our coordinate system (see above) to Game Maker Studio's Coordinate System
 function get_tile_position(x, y) {

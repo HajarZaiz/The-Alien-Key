@@ -27,6 +27,7 @@
     {"id":{"name":"obj_LavaShoe","path":"objects/obj_LavaShoe/obj_LavaShoe.yy",},"order":1,},
     {"id":{"name":"spr_Star","path":"sprites/spr_Star/spr_Star.yy",},"order":2,},
     {"id":{"name":"spr_SmartEnemyBottomRight","path":"sprites/spr_SmartEnemyBottomRight/spr_SmartEnemyBottomRight.yy",},"order":3,},
+    {"id":{"name":"Level1","path":"rooms/Level1/Level1.yy",},"order":3,},
     {"id":{"name":"spr_SmartEnemyTopLeft","path":"sprites/spr_SmartEnemyTopLeft/spr_SmartEnemyTopLeft.yy",},"order":0,},
     {"id":{"name":"obj_mainMenuController","path":"objects/obj_mainMenuController/obj_mainMenuController.yy",},"order":10,},
     {"id":{"name":"spr_WaterShoe","path":"sprites/spr_WaterShoe/spr_WaterShoe.yy",},"order":2,},
@@ -43,7 +44,6 @@
     {"id":{"name":"tileset_Ground","path":"tilesets/tileset_Ground/tileset_Ground.yy",},"order":0,},
     {"id":{"name":"obj_movable","path":"objects/obj_movable/obj_movable.yy",},"order":6,},
     {"id":{"name":"f_score","path":"fonts/f_score/f_score.yy",},"order":1,},
-    {"id":{"name":"script_PerlinNoise","path":"scripts/script_PerlinNoise/script_PerlinNoise.yy",},"order":4,},
     {"id":{"name":"script_Pathfinding","path":"scripts/script_Pathfinding/script_Pathfinding.yy",},"order":3,},
     {"id":{"name":"spr_PlayerTopLeft","path":"sprites/spr_PlayerTopLeft/spr_PlayerTopLeft.yy",},"order":0,},
     {"id":{"name":"spr_LavaEnemyBottomRight","path":"sprites/spr_LavaEnemyBottomRight/spr_LavaEnemyBottomRight.yy",},"order":3,},
@@ -71,6 +71,7 @@
   },
   "RoomOrderNodes": [
     {"roomId":{"name":"MainMenuRoom","path":"rooms/MainMenuRoom/MainMenuRoom.yy",},},
+    {"roomId":{"name":"Level1","path":"rooms/Level1/Level1.yy",},},
     {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"roomId":{"name":"GameOver","path":"rooms/GameOver/GameOver.yy",},},
   ],
@@ -107,7 +108,7 @@
   ],
   "IncludedFiles": [],
   "MetaData": {
-    "IDEVersion": "2.3.4.580",
+    "IDEVersion": "2.3.6.595",
   },
   "resourceVersion": "1.4",
   "name": "Project 2",

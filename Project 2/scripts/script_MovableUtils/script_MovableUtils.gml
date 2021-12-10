@@ -71,8 +71,11 @@ function get_screen_coords(tileX, tileY) {
 
 // Converts from screen coordinates to tile coordinates (our system)
 function get_tile_coords(xCoord, yCoord) {
-	return {
+	var coords = {
 		x: round(xCoord / (global.tileWidth / 2)) - 1,
 		y: round(yCoord / (global.tileHeight / 2)) - 1
 	};
+	
+	if (coords.x % 2 != coords.y % 2) coords.x = coords.x - 1;
+	return coords;
 }

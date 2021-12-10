@@ -6,5 +6,7 @@ if(instance_exists(obj_player)){
 		show_debug_message(tileX);
 		instance_destroy();
 		global.ownedKeys += 1;
+		
+		room_goto_next();
 	}
 }

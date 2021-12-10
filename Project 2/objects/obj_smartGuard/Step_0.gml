@@ -43,31 +43,31 @@ if (tileMovementProgress == -2.0) {
 			for (var i = ds_list_size(path) - 1; i > 0; i--)
 			{
 			   var nextTile = path[| i];
-			   show_debug_message("I'm trying to go to tile: ");
-			   show_debug_message(nextTile);
-			   show_debug_message("I'm currently in the tile: ");
-			   show_debug_message({x: tileX, y: tileY});
+			   // show_debug_message("I'm trying to go to tile: ");
+			   // show_debug_message(nextTile);
+			   // show_debug_message("I'm currently in the tile: ");
+			   // show_debug_message({x: tileX, y: tileY});
 			   //If the next tile is to the left top
 			   if(nextTile.x == tileX - 1 and nextTile.y == tileY - 1){
-				   show_debug_message("I should move left up");
+				    // show_debug_message("I should move left up");
 					moveDirection = MoveDirection.TopLeft;
 					sprite_index = spr_SmartEnemyTopLeft;
 			   }
 			   
 			   if(nextTile.x == tileX + 1 and nextTile.y == tileY - 1){
-				   show_debug_message("I should move right up");
+				    // show_debug_message("I should move right up");
 					moveDirection = MoveDirection.TopRight;
 					sprite_index = spr_SmartEnemyTopRight;
 			   }
 			   
 			   if(nextTile.x == tileX - 1 and nextTile.y == tileY + 1){
-				   show_debug_message("I should move left down");
+				    // show_debug_message("I should move left down");
 					moveDirection = MoveDirection.BottomLeft;
 					sprite_index = spr_SmartEnemyBottomLeft;
 			   }
 			   
 			   if(nextTile.x == tileX + 1 and nextTile.y == tileY + 1){
-				   show_debug_message("I should move right down");
+				    // show_debug_message("I should move right down");
 					moveDirection = MoveDirection.BottomRight;
 					sprite_index = spr_SmartEnemyBottomRight;
 			   }
@@ -75,8 +75,8 @@ if (tileMovementProgress == -2.0) {
 				if (moveDirection != MoveDirection.Idle) {
 					tileMovementProgress = -1.0;
 				}
-				show_debug_message("I reached the tile: ");
-				show_debug_message(get_tile_coords(x, y));
+				// show_debug_message("I reached the tile: ");
+				// show_debug_message(get_tile_coords(x, y));
 
 			}
 		}else{
