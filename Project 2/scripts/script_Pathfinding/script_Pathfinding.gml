@@ -36,19 +36,22 @@ function A_star_search(start, destination, movableTiles){
 		// TESTING END
 		
 		// If we found our path
-		// show_debug_message(current);
 		if(current.x == destination.x and current.y == destination.y){
 			show_debug_message("GOTCHA");
-			// var c = {x: destination.x, y: destination.y};
+			var c = {x: destination.x, y: destination.y};
 			// show_debug_message(typeof(c));
 			// show_debug_message(c);
-			var n = strToPos(ds_map_find_value(parentTile, posToStr({x: destination.x, y: destination.y})));
-			// ds_map_exists()
-			// It Should be a struct 
-			show_debug_message(n);
-			show_debug_message(typeof(n));
+			
+			while(c.x != start.x or c.y != start.y){
+				ds_list_add(path, c);
+				var n = strToPos(ds_map_find_value(parentTile, posToStr({x: c.x, y: c.y})));
+				c = n;
+			}
+
+			//show_debug_message(n);
+			//show_debug_message(typeof(n));
 					
-			// show_debug_message("The solution path is:");
+			show_debug_message("The solution path is:");
 			printList(path);
 			return path;
 		}
