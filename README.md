@@ -19,6 +19,11 @@ I -> View Inventory/Pause Game
 Escape -> Exit Inventory/Resume Game
 ```
 
+## Path
+```
+For patrolling we did not use GMS2 paths because we have our own movement system. We generated sequences of movements to be followed.
+```
+
 ## Cheat Codes
 ```
 alt t -> +1 spikes
