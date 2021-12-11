@@ -10,6 +10,10 @@ moveDirection = MoveDirection.Idle;
 // This should be overrided by the inherited instance based on the object's properties
 movableTiles = [TileType.Ground];
 
+// The tile type the movable object is currently standing on.
+// This can be used for spawning particles in the inherited object
+currentTileType = movableTiles[0];
+
 // The tile movement progress, this is between 0 and 1 and is only defined
 // when moveDirection is not idle, -1 means it is currently idle
 // When this is -2.0 then the inherited instance should reset/update the move direction

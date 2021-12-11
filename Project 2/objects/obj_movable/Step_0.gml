@@ -122,6 +122,8 @@ if (tileMovementProgress >= 1.0) {
 			break;
 	}
 	
+	currentTileType = get_tile(tileX, tileY);
+	
 	var screenCoords = get_screen_coords(tileX, tileY);
 	x = screenCoords.x;
 	y = screenCoords.y;

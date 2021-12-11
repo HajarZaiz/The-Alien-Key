@@ -16,6 +16,8 @@ global.inventory = ds_map_create();
 global.invSlots = 0;
 global.invCapacity = 16;
 
+inCutscene = false;
+
 previousDirection = MoveDirection.BottomLeft;
 
 //For testing
