@@ -28,9 +28,10 @@ alt w -> +1 water shoe
 ```
 
 ## Credits
+```
 All SFX (item pickup, damage, jingles) by celestialghost8 (CC0 - opengameart.org)
-https://opengameart.org/content/8bit-sfx 
+https://opengameart.org/content/8bit-sfx
 Background Game Music by Circlerun (CC-BY 3.0 - opengameart.org)
-https://opengameart.org/content/adventure-platform-menu-bgm-pack-i 
+https://opengameart.org/content/adventure-platform-menu-bgm-pack-i
 All tiles, objects, and art by Rishi Challa (2021)
-
+```
