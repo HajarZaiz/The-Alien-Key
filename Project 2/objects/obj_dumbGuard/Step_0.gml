@@ -3,22 +3,22 @@ event_inherited();
 if (tileMovementProgress == -2.0 and patrolling) {
 
 	if(patrollingPath[patrolIndex] == MoveDirection.TopLeft){
-		show_debug_message("I have to go top left");
+		// show_debug_message("I have to go top left");
 		moveDirection = MoveDirection.TopLeft;
 		sprite_index = spriteTopLeft;
 	}
 	else if(patrollingPath[patrolIndex] == MoveDirection.TopRight){
-		show_debug_message("I have to go top right");
+		// show_debug_message("I have to go top right");
 		moveDirection = MoveDirection.TopRight;
 		sprite_index = spriteTopRight;
 	}
 	else if(patrollingPath[patrolIndex] == MoveDirection.BottomLeft){
-		show_debug_message("I have to go bottom left");
+		// show_debug_message("I have to go bottom left");
 		moveDirection = MoveDirection.BottomLeft;
 		sprite_index = spriteBottomLeft;
 	}
 	else if(patrollingPath[patrolIndex] == MoveDirection.BottomRight){
-		show_debug_message("I have to go bottom right");
+		// show_debug_message("I have to go bottom right");
 		moveDirection = MoveDirection.BottomRight;
 		sprite_index = spriteBottomRight;
 	}else {
@@ -38,10 +38,8 @@ if(instance_exists(obj_player)){
 	//Collision
 	if (tileX == obj_player.tileX && tileY == obj_player.tileY && canDamage) {
 		canDamage = !canDamage;
+		audio_play_sound(sound_Hurt, 2, false);
 		lives = lives - 1;
-		if(lives <= 0){
-			room_goto(GameOver);
-		}
 	}
 
 	if(!canDamage && tileX != obj_player.tileX && tileY != obj_player.tileY){

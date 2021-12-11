@@ -4,6 +4,8 @@
 // Direction Facing to place spikes - previousDirection
 
 if (moveDirection == MoveDirection.Idle) {
+	
+	audio_play_sound(sound_PlaceSpikes, 2, false);
 
 	var tilePosX = tileX;
 	var tilePosY = tileY;

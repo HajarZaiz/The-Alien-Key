@@ -3,6 +3,7 @@
 
 if (tileX == obj_player.tileX && tileY == obj_player.tileY) {
 	// Collision!
-	instance_destroy();
+	audio_play_sound(sound_Collectible, 2, false);
 	score = score + 20;
+	instance_destroy();
 }

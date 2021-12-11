@@ -3,8 +3,9 @@
 
 if (tileX == obj_player.tileX && tileY == obj_player.tileY) {
 	// Collision!
-	instance_destroy();
 	if(lives < 6){
 		lives = lives + 1;
 	}
+	audio_play_sound(sound_Collectible, 2, false);
+	instance_destroy();
 }

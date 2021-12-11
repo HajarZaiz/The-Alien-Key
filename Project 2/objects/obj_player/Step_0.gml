@@ -32,3 +32,33 @@ if (tileMovementProgress == -2.0) {
 		previousDirection = moveDirection;
 	}
 }
+
+// Cheat Codes
+
+if (keyboard_check(vk_alt) || keyboard_check(vk_shift)) {
+
+	//Add Spikes to inventory
+	if(keyboard_check_pressed(ord("S"))) {
+		pickupItemNoDestroy(InventoryItem.Spikes);
+		audio_play_sound(sound_Collectible, 2, false);
+	}
+	//Add Water Shoe to inventory
+	if(keyboard_check_pressed(ord("W"))) {
+		pickupItemNoDestroy(InventoryItem.WaterShoe);
+		audio_play_sound(sound_Collectible, 2, false);
+	}
+
+	//Add LavaShoe to inventory
+	if(keyboard_check_pressed(ord("L"))) {
+		pickupItemNoDestroy(InventoryItem.LavaShoe);
+		audio_play_sound(sound_Collectible, 2, false);
+	}
+
+	//Increase lives
+	if(keyboard_check_pressed(ord("H"))) {
+		audio_play_sound(sound_Collectible, 2, false);
+		if(lives < 6){
+			lives = lives + 1;
+		}
+	}
+}

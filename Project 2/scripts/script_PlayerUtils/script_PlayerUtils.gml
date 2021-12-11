@@ -77,3 +77,17 @@ function pickUpItem(itemType){
 	}
 }
 
+function pickupItemNoDestroy(itemType) {
+	//If there is enough space
+	if(global.invSlots < global.invCapacity){
+		//Check if key already exists in inventory map
+		if(!ds_map_exists(global.inventory, itemType)){
+			ds_map_add(global.inventory, itemType, 1);
+		}else{
+			var oldValue = ds_map_find_value(global.inventory, itemType);
+			ds_map_replace( global.inventory, itemType, oldValue + 1);
+		}
+		
+		global.invSlots += 1;
+	}
+}

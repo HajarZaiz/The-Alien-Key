@@ -94,10 +94,8 @@ if (tileMovementProgress == -2.0) {
 //Collision
 if (tileX == obj_player.tileX && tileY == obj_player.tileY && canDamage) {
 	canDamage = !canDamage;
+	audio_play_sound(sound_Hurt, 2, false);
 	lives = lives - 1;
-	if(lives <= 0){
-		room_goto(GameOver);
-	}
 }
 
 if(!canDamage && tileX != obj_player.tileX && tileY != obj_player.tileY){

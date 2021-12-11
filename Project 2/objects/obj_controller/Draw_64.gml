@@ -40,3 +40,13 @@ if(paused){
 }else{
 	instance_activate_all();
 }
+
+if (lives <= 0) {
+	draw_set_alpha(0.75);
+	draw_sprite(spr_InvBackground, 0, 1920 / 2, 1080 / 2);
+	draw_set_color(make_color_rgb(195, 219, 217));
+	draw_set_halign(fa_center)
+	draw_set_font(f_pause);
+	draw_text(1920/2, 150, "Game Over\n(Press R To Restart)");
+	draw_set_alpha(1.0);
+}

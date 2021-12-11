@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"19d18ded-295a-42f0-a4af-346c8a9d8dc3","path":"sprites/spr_MainMenu/spr_MainMenu.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"19d18ded-295a-42f0-a4af-346c8a9d8dc3","path":"sprites/spr_MainMenu/spr_MainMenu.yy",},"LayerId":{"name":"da2609b5-f658-459d-8270-0e993f921d8b","path":"sprites/spr_MainMenu/spr_MainMenu.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_MainMenu","path":"sprites/spr_MainMenu/spr_MainMenu.yy",},"resourceVersion":"1.0","name":"19d18ded-295a-42f0-a4af-346c8a9d8dc3","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"2c7340e2-d3a4-48c7-990b-f6a976707e03","path":"sprites/spr_GameWin/spr_GameWin.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"2c7340e2-d3a4-48c7-990b-f6a976707e03","path":"sprites/spr_GameWin/spr_GameWin.yy",},"LayerId":{"name":"748bbbfd-a94a-4cf7-8774-93a54f5af6e0","path":"sprites/spr_GameWin/spr_GameWin.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_GameWin","path":"sprites/spr_GameWin/spr_GameWin.yy",},"resourceVersion":"1.0","name":"2c7340e2-d3a4-48c7-990b-f6a976707e03","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_MainMenu","path":"sprites/spr_MainMenu/spr_MainMenu.yy",},
+    "spriteId": {"name":"spr_GameWin","path":"sprites/spr_GameWin/spr_GameWin.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"3c596e14-1b1e-4aa3-ba69-c172983341ec","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"19d18ded-295a-42f0-a4af-346c8a9d8dc3","path":"sprites/spr_MainMenu/spr_MainMenu.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"eb13310c-68e1-4177-96e2-ecb18c28d47d","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"2c7340e2-d3a4-48c7-990b-f6a976707e03","path":"sprites/spr_GameWin/spr_GameWin.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -58,14 +58,14 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_MainMenu","path":"sprites/spr_MainMenu/spr_MainMenu.yy",},
+    "parent": {"name":"spr_GameWin","path":"sprites/spr_GameWin/spr_GameWin.yy",},
     "resourceVersion": "1.3",
-    "name": "spr_MainMenu",
+    "name": "spr_GameWin",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"da2609b5-f658-459d-8270-0e993f921d8b","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"748bbbfd-a94a-4cf7-8774-93a54f5af6e0","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
@@ -73,7 +73,7 @@
     "path": "folders/Sprites.yy",
   },
   "resourceVersion": "1.0",
-  "name": "spr_MainMenu",
+  "name": "spr_GameWin",
   "tags": [],
   "resourceType": "GMSprite",
 }
