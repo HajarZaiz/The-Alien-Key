@@ -19,6 +19,8 @@ upLeft = 3;
 downRight = 3;
 downLeft = 3;
 
+patrolIndex = 0;
+
 //Prevent decreasing health repetitively
 canDamage = true;
 
