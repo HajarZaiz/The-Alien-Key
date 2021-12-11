@@ -26,7 +26,7 @@ For patrolling we did not use GMS2 paths because we have our own movement system
 
 ## Cheat Codes
 ```
-alt t -> +1 spikes
+alt s -> +1 spikes
 alt h -> +1 health
 alt l -> +1 lava shoe
 alt w -> +1 water shoe
