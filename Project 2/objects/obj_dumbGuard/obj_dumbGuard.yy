@@ -35,6 +35,8 @@
     {"varType":5,"value":"spr_DumbEnemyTopRight","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"spriteTopRight","tags":[],"resourceType":"GMObjectProperty",},
     {"varType":5,"value":"spr_DumbEnemyBottomLeft","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"spriteBottomLeft","tags":[],"resourceType":"GMObjectProperty",},
     {"varType":5,"value":"spr_DumbEnemyBottomRight","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"spriteBottomRight","tags":[],"resourceType":"GMObjectProperty",},
+    {"varType":1,"value":"6","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"initialX","tags":[],"resourceType":"GMObjectProperty",},
+    {"varType":1,"value":"4","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"initialY","tags":[],"resourceType":"GMObjectProperty",},
   ],
   "overriddenProperties": [],
   "parent": {

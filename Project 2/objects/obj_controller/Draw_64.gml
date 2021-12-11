@@ -13,9 +13,6 @@ draw_set_font(f_score);
 draw_set_halign(fa_middle);
 draw_text(170, 100, "Score: "+ string(score));
 
-if(room == Room1 && global.ownedKeys == 1){
-	draw_sprite(spr_Key, 0, 1850, 50);
-}
 
 //Display Inventory
 

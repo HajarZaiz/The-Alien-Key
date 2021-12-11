@@ -1,7 +1,7 @@
 event_inherited();
 
-tileX = 6;
-tileY = 4;
+tileX = initialX;
+tileY = initialY;
 
 
 var coords = get_screen_coords(tileX, tileY);
@@ -14,10 +14,6 @@ tileY = tileCoords.y;
 
 //patrolling variables
 patrolling = true;
-upRight = 3;
-upLeft = 3;
-downRight = 3;
-downLeft = 3;
 
 patrolIndex = 0;
 
@@ -25,3 +21,7 @@ patrolIndex = 0;
 canDamage = true;
 
 movableTiles = [TileType.Ground, TileType.Lava, TileType.Water, TileType.Spike];
+harmfulTiles = ds_list_create();
+ds_list_add(harmfulTiles, TileType.Lava);
+ds_list_add(harmfulTiles, TileType.Water);
+ds_list_add(harmfulTiles, TileType.Spike);

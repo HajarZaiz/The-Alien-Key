@@ -108,6 +108,17 @@ function valueExistsInList(list, value){
 	return false;
 }
 
+function enumExistsInList(list, value){
+	for (var i = 0; i < ds_list_size(list); i++)
+	{
+	   var current = list[| i];
+	   if(current == value){
+		   return true;
+	   }
+	}
+	return false;
+}
+
 function printList(list){
 	for(var i = 0; i < ds_list_size(list); i++){
 		show_debug_message(string(ds_list_find_value(list, i)));

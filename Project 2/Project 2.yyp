@@ -10,7 +10,9 @@
     {"id":{"name":"spr_DumbEnemyBottomLeft","path":"sprites/spr_DumbEnemyBottomLeft/spr_DumbEnemyBottomLeft.yy",},"order":2,},
     {"id":{"name":"MainMenuRoom","path":"rooms/MainMenuRoom/MainMenuRoom.yy",},"order":2,},
     {"id":{"name":"spr_LavaShoe","path":"sprites/spr_LavaShoe/spr_LavaShoe.yy",},"order":1,},
+    {"id":{"name":"obj_dumbWaterGuard","path":"objects/obj_dumbWaterGuard/obj_dumbWaterGuard.yy",},"order":3,},
     {"id":{"name":"script_TileUtils","path":"scripts/script_TileUtils/script_TileUtils.yy",},"order":1,},
+    {"id":{"name":"obj_dumbLavaGuard","path":"objects/obj_dumbLavaGuard/obj_dumbLavaGuard.yy",},"order":2,},
     {"id":{"name":"spr_InvBackground","path":"sprites/spr_InvBackground/spr_InvBackground.yy",},"order":4,},
     {"id":{"name":"spr_DumbEnemyTopRight","path":"sprites/spr_DumbEnemyTopRight/spr_DumbEnemyTopRight.yy",},"order":1,},
     {"id":{"name":"obj_smartGuard","path":"objects/obj_smartGuard/obj_smartGuard.yy",},"order":1,},
@@ -108,7 +110,7 @@
   ],
   "IncludedFiles": [],
   "MetaData": {
-    "IDEVersion": "2.3.6.595",
+    "IDEVersion": "2.3.4.580",
   },
   "resourceVersion": "1.4",
   "name": "Project 2",

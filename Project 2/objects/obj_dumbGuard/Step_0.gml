@@ -2,36 +2,6 @@ event_inherited();
 
 if (tileMovementProgress == -2.0 and patrolling) {
 
-	/*
-	if (upRight > 0) {
-		moveDirection = MoveDirection.TopRight;
-		upRight = upRight - 1;
-		sprite_index = spr_DumbEnemyTopRight;
-	}
-	else if (downRight > 0 and upRight == 0) {
-		moveDirection = MoveDirection.BottomRight;
-		downRight = downRight -1;
-		sprite_index = spr_DumbEnemyBottomRight;
-	}
-	else if (downLeft > 0 ) {
-		moveDirection = MoveDirection.BottomLeft;
-		downLeft = downLeft -1;
-		sprite_index = spr_DumbEnemyBottomLeft;
-	}
-	else if (upLeft > 0) {
-		moveDirection = MoveDirection.TopLeft;
-		upLeft = upLeft - 1;
-		sprite_index = spr_DumbEnemyTopLeft;
-	}
-	else {
-		//Reset
-		upRight = 3;
-		upLeft = 3;
-		downRight = 3;
-		downLeft = 3;
-		moveDirection = MoveDirection.Idle;
-	}
-	*/
 	if(patrollingPath[patrolIndex] == MoveDirection.TopLeft){
 		show_debug_message("I have to go top left");
 		moveDirection = MoveDirection.TopLeft;
@@ -79,13 +49,15 @@ if(instance_exists(obj_player)){
 	}
 }
 
-/*
+
 //This guard is supposed to be the dumbest one as he doesn't spot lava, spikes, and water during chasing
 //Check if Guard is above Lava, Spikes and destroy him
 var currentTileType = get_tile(tileX, tileY);
-if(currentTileType == TileType.Lava or currentTileType == TileType.Water or currentTileType == TileType.Spike){
+
+if(enumExistsInList(harmfulTiles, currentTileType)){
 	instance_destroy();
 }
+
 if(instance_exists(obj_player)){
 	var distanceToPlayer = abs(obj_player.x - x) + abs(obj_player.y - y)
 	if(distanceToPlayer < observationRadius){
@@ -95,14 +67,14 @@ if(instance_exists(obj_player)){
 			if(obj_player.tileY < tileY){
 				//Move top left
 				moveDirection = MoveDirection.TopLeft;
-				sprite_index = spr_DumbEnemyTopLeft;
+				sprite_index = spriteTopLeft;
 			}
 			
 			//If the player is at the bottom
 			if(obj_player.tileY > tileY){
 				//Move top left
 				moveDirection = MoveDirection.BottomLeft;
-				sprite_index = spr_DumbEnemyBottomLeft;
+				sprite_index = spriteBottomLeft;
 			}
 		}
 		
@@ -112,16 +84,15 @@ if(instance_exists(obj_player)){
 			if(obj_player.tileY < tileY){
 				//Move top left
 				moveDirection = MoveDirection.TopRight;
-				sprite_index = spr_DumbEnemyTopRight;
+				sprite_index = spriteTopRight;
 			}
 			
 			//If the player is at the bottom
 			if(obj_player.tileY > tileY){
 				//Move top left
 				moveDirection = MoveDirection.BottomRight;
-				sprite_index = spr_DumbEnemyBottomRight;
+				sprite_index = spriteBottomRight;
 			}
 		}
 	}
 }
-*/
