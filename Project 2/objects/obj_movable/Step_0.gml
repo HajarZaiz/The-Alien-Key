@@ -128,3 +128,13 @@ if (tileMovementProgress >= 1.0) {
 	x = screenCoords.x;
 	y = screenCoords.y;
 }
+
+if (currentTileType == TileType.Ground && tileMovementProgress != -2.0) {
+	part_particles_create(global.particleSystem, x, y, global.dustParticle, 10);
+}
+if (currentTileType == TileType.Water) {
+	part_particles_create(global.particleSystem, x, y, global.waterParticle, 10);
+}
+if (currentTileType == TileType.Lava) {
+	part_particles_create(global.particleSystem, x, y, global.lavaParticle, 10);
+}

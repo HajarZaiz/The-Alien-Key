@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-global.particleSystem = part_system_create_layer(layer, true);
+global.particleSystem = part_system_create_layer(layer_get_id("Particles"), true);
 global.dustParticle = part_type_create();
 global.waterParticle = part_type_create();
 global.lavaParticle = part_type_create();

@@ -7,18 +7,22 @@ if (tileMovementProgress == -2.0) {
 		//Patrolling
 		if (upRight > 0) {
 			moveDirection = MoveDirection.TopRight;
+			sprite_index = spr_SmartEnemyTopRight;
 			upRight = upRight - 1;
 		}
 		else if (downRight > 0 and upRight == 0) {
 			moveDirection = MoveDirection.BottomRight;
+			sprite_index = spr_SmartEnemyBottomRight;
 			downRight = downRight -1;
 		}
 		else if (downLeft > 0 ) {
 			moveDirection = MoveDirection.BottomLeft;
+			sprite_index = spr_SmartEnemyBottomLeft;
 			downLeft = downLeft -1;
 		}
 		else if (upLeft > 0) {
 			moveDirection = MoveDirection.TopLeft;
+			sprite_index = spr_SmartEnemyTopLeft;
 			upLeft = upLeft - 1;
 		}
 		else {

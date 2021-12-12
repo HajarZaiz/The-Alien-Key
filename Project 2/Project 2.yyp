@@ -34,6 +34,7 @@
     {"id":{"name":"spr_SmartEnemyBottomRight","path":"sprites/spr_SmartEnemyBottomRight/spr_SmartEnemyBottomRight.yy",},"order":3,},
     {"id":{"name":"Level1","path":"rooms/Level1/Level1.yy",},"order":3,},
     {"id":{"name":"spr_SmartEnemyTopLeft","path":"sprites/spr_SmartEnemyTopLeft/spr_SmartEnemyTopLeft.yy",},"order":0,},
+    {"id":{"name":"Level2","path":"rooms/Level2/Level2.yy",},"order":5,},
     {"id":{"name":"obj_mainMenuController","path":"objects/obj_mainMenuController/obj_mainMenuController.yy",},"order":10,},
     {"id":{"name":"spr_WaterShoe","path":"sprites/spr_WaterShoe/spr_WaterShoe.yy",},"order":2,},
     {"id":{"name":"obj_controller","path":"objects/obj_controller/obj_controller.yy",},"order":7,},
@@ -84,8 +85,9 @@
   "RoomOrderNodes": [
     {"roomId":{"name":"MainMenuRoom","path":"rooms/MainMenuRoom/MainMenuRoom.yy",},},
     {"roomId":{"name":"Level1","path":"rooms/Level1/Level1.yy",},},
-    {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"roomId":{"name":"Level2","path":"rooms/Level2/Level2.yy",},},
     {"roomId":{"name":"GameWinRoom","path":"rooms/GameWinRoom/GameWinRoom.yy",},},
+    {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":1,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},

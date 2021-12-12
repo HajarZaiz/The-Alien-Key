@@ -47,7 +47,7 @@ if(instance_exists(obj_player)){
 	}
 }
 
-
+/*
 //This guard is supposed to be the dumbest one as he doesn't spot lava, spikes, and water during chasing
 //Check if Guard is above Lava, Spikes and destroy him
 var currentTileType = get_tile(tileX, tileY);
@@ -94,3 +94,4 @@ if(instance_exists(obj_player)){
 		}
 	}
 }
+*/
